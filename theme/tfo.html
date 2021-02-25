@@ -1,15 +1,15 @@
 <!--IconValuesStart-->
 {
-    "music":"musical-notes",
-    "video":"logo-youtube",
-    "img":"image",
-    "office":"paper",
-    "txt":"clipboard",
-    "zip":"filing",
-    "iso":"disc",
+    "music":"musical-notes-outline",
+    "video":"videocam-outline",
+    "img":"image-outline",
+    "office":"newspaper-outline",
+    "txt":"reader-outline",
+    "zip":"albums-outline",
+    "iso":"disc-outline",
     "apk":"logo-android",
     "exe":"logo-windows",
-    "default":"document"
+    "default":"document-outline"
 }
 <!--IconValuesEnd-->
 <!DOCTYPE html>
@@ -18,78 +18,191 @@
     <title><!--Title--></title>
     <meta charset=utf-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge">
-    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=viewport content="width=device-width,initial-scale=1;minimum-scale=1,maximum-scale=1,user-scalable=no,initial-scale=1">
+    <meta name="referrer" content="no-referrer">
     <meta name="keywords" content="<!--Keywords-->">
-    <meta name="description" content="<!--Description-->">
+    <meta name="description" content="Power by Tfo's Theme for OneManager-php" />
     <link rel="icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
     <style type="text/css">
-        body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1em;color:#000;background-color:#f7f7f9;<!--BackgroundStart-->background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-image:url("<!--BackgroundUrl-->");<!--BackgroundEnd-->}
-        a{color:#24292e;cursor:pointer;text-decoration:none}
-        ion-icon{font-size:15px;vertical-align:bottom}
-        .changelanguage{position:absolute;right:5px;}
-        .title{text-align:center;margin-top:1rem;letter-spacing:2px;margin-bottom:2rem}
-        .title a{color:#333;text-decoration:none}
-        .list-wrapper{width:80%;margin:0 auto 30px;position:relative;box-shadow:0 0 32px 0 rgb(128,128,128);border-radius:15px;}
-        .list-container{position:relative;overflow:hidden;border-radius:15px;}
+        body{font-family:'-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif',Helvetica,Arial,sans-serif;font-size:14px;line-height:1em;color:#000;background-color:#f7f7f9;}
+        a{color:#24292e;cursor:pointer;text-decoration:none;white-space:nowrap;}
+        ion-icon{font-size:20px;vertical-align:middle;}
+        .changelanguage{position:absolute;right:5px;display:none;}
+        .title{text-align:center;margin:1rem auto;letter-spacing:1px;margin-bottom:2rem;text-shadow:0 1px 15px rgba(27,31,35,1);text-decoration:none;transition-duration:0.3s;border:1px solid rgba(27,31,35,0);height:10px;padding:16px 16px;overflow:hidden;width:fit-content;border-radius:36px;}
+        .title:hover{text-shadow:0 1px 15px rgba(27,31,35,0);background-color:rgba(200,200,200,.6);box-shadow:0 1px 15px rgba(27,31,35,.15);}
+        .title a{color:#FFFFFF;text-decoration:none;}
+        .list-wrapper{width:88%;margin:0 auto 10px;position:relative;border-radius:6px;box-shadow:0 1px 15px rgba(27,31,35,.15);border:1px solid rgba(27,31,35,.15);}
+        .list-container{position:relative;overflow:hidden;border-radius:6px;}        .list-header-container{position:relative}
         .list-header-container{position:relative}
-        .list-header-container a.back-link{color:#000;display:inline-block;position:absolute;font-size:16px;margin:20px 10px;padding:10px 10px;vertical-align:middle;text-decoration:none}
+        .list-header-container a.back-link{color:#000000;display:inline-block;position:absolute;font-size:16px;margin:20px 10px;vertical-align:middle;text-decoration:none;padding:19px 19px;}
         .list-container,.list-header-container,.list-wrapper,a.back-link:hover,body{color:#24292e}
-        .table-header{margin:0;border:0 none;padding:30px 30px;text-align:left;font-weight:400;color:#000;background-color:rgba(245,245,245,0.5);word-break: break-all;word-wrap: break-word;}
-        .list-body-container{position:relative;left:0;overflow-x:hidden;overflow-y:auto;box-sizing:border-box;background:rgba(245,245,245,0.5)}
-        .more-disk{margin:0;border:0 none;padding:30px 30px;text-align:left;font-weight:400;color:#000;background-color:rgba(245,245,245,0.5);white-space:nowrap;overflow:auto;}
-        .more-disk a{margin:0 10px;padding:5px;transition-duration: 0.4s;border-radius: 12px; background-color: white; color: black; border: 2px solid rgba(85,85,85,0.7); }
-        .more-disk a:hover, .more-disk a[now]{ background-color: rgba(85,85,85,0.7); color: white; }
-        .list-table{width:100%;padding:0 20px 20px 20px;border-spacing:0}
-        .list-table tr{height:40px}
-        .list-table tr[data-to]:hover{background:rgba(85,85,85,0.7);color:white;}
-        .list-table tr[data-to]:hover a{color:white}
+        .table-header{margin:0;border:0 none;padding:16px 24px;text-align:left;font-weight:400;word-break:break-all;word-wrap:break-word;color:#24292e;background-color:rgba(245,245,245,0.3);line-height:1.3;font-size:18px}
+        .list-body-container{position:relative;left:0;overflow-x:hidden;overflow-y:auto;box-sizing:border-box;background:rgba(245,245,245,0.6)}
+        .more-disk{margin:0;border:0 none;font-weight:400;color:#000;padding:12px 12px;text-align:center;background-color:rgba(245,245,245,0.3);line-height:32px;box-shadow:0 1px 8px rgba(27,31,35,0.8);}
+        .more-disk a{margin:0 2px;padding:5px;transition-duration:0.3s;border-radius:18px;background-color:transparent;color:#24292e;border:2px solid rgba(85,85,85,0.7);border:1px solid rgba(27,31,35,0);font-size:16px;}
+        .more-disk a:hover,.more-disk a[now]{background:rgba(245,245,245,0.3);color:#FFFFFF;border:1px solid rgba(27,31,35,.15);box-shadow:0 1px 15px rgba(27,31,35,.15)}
+        .list-table{width:100%;padding:0 10px 10px 10px;border-spacing:0;overflow:hidden;table-layout:fixed}
+        .list-table tr{height:fit-content;float:left;width:100%;transition-duration:0.3s;border-radius:16px}
+        .list-table tr[data-to]:hover{color:white;background:linear-gradient(to right,rgb(3,102,214,0.9),rgba(3,102,214,0.3));box-shadow:0 1px 15px rgba(27,31,35,.15)}        
+        .list-table tr[data-to]:hover a{color:white;}
         .list-table tr:first-child{background:rgba(245,245,245,0)}
-        .list-table td,.list-table th{padding:0 10px;text-align:left}
+        .list-table td,.list-table th{text-align:left}
+        .list-table td.updated_at,.list-table th.updated_at{width:15%;}
+        .list-table td.file,.list-table th.file{width:72%;}
+        .list-table td.size,.list-table th.size{width:10%;}
+        .list-table td,.list-table th{padding:0 8px;text-align:left;float:left;line-height:32px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .list-table td button,.list-table th button,.swal-button{border-radius:16px;transition-duration: 0.3s;cursor:pointer;color:#24292e;height:24px;padding: 0 8px;background:transparent;border:1px solid rgba(27,31,35,0);font-weight:bold;}
+        .list-table td button:hover,.list-table th button:hover,.swal-button:hover{color:#FFF;background:rgba(3,102,214,0.6);border:1px solid rgba(27,31,35,.15);box-shadow:0 1px 15px rgba(27,31,35,.15);}
         .list-table .size,.list-table .updated_at{text-align:right}
-        .updated_at{width:25%}
-        .size{width:15%}
-        .mask{position:absolute;left:0px;top:0px;width:100%;background-color:#000;filter:alpha(opacity=50);opacity:0.5;z-index:2;}
+        .mask{position:absolute;left:0px;top:0px;width:100%;background-color:#000;filter:alpha(opacity=30);opacity:0.3;z-index:2;}
 <!--AdminStart-->
         .operate{display:inline-table;margin:0;margin-right:5px;list-style:none}
-        .operate ul{position:absolute;display:none;background:#fffaaa;border:0px #f7f7f7 solid;border-radius:5px;margin:-7px 0 0 0;padding:0 7px;color:#205D67;z-index:1;}
+        .operate ul{position:absolute;display:none;background:white;transition-duration: 0.3s;box-shadow:0 1px 15px rgba(27,31,35,.15);border:1px solid rgba(27,31,35,.15);border-radius:32px;margin:-7px 0 0 0;padding:0 3px;color:#205D67;z-index:3;}        .operate:hover ul{position:absolute;display:inline-table;}
+        .operate ul li{padding:6px;list-style:none;display:block;float:left;font-size:0px;line-height:16px;}
         .operate:hover ul{position:absolute;display:inline-table;}
-        .operate ul li{padding:7px;list-style:none;display:block;}
-        .list-table tr[data-to]:hover .operate ul li a{color:black}
+        #opflow:hover ul{position:fixed;display:inline-table;}
+        .list-table tr[data-to]:hover .operate ul li a{color:#24292e}
 <!--AdminEnd-->
-        .operatediv{position:absolute;border:1px #CCCCCC;background-color:#FFFFCC;z-index:2;}
+        .operatediv{position:absolute;border:0px #CCCCCC;box-shadow:0 1px 15px rgba(27,31,35,.15);border:1px solid rgba(27,31,35,.15);transition-duration: 0.3s;border-radius:6px;background-color:white;color:#24292e;z-index:3;}        
         .operatediv div{margin:16px}
         .operatediv_close{position:absolute;right:3px;top:3px;}
-        .readme{padding:8px;background-color:rgba(245,245,245,0.5);}
-        .markdown-body, .customfile{padding:20px;text-align:left}
-        @media only screen and (max-width:480px){
+        .markdown-body, .customfile{padding:24px;text-align:left;font-size:14px !important}
+<!--TfoStyleStart-->
+        .bkgd{<!--BackgroundStart-->background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-image:url("<!--BackgroundUrl-->");background-position:center;width:100%;height:100%;filter:blur(1px)brightness(88%);position:fixed;left:0;top:0;z-index:-1;<!--BackgroundEnd-->}
+        ::selection{background-color:rgba(200,200,200,0.5)}
+        input{cursor:pointer;padding: 0 8px;height:24px;font-weight:bold;border:1px solid rgba(27,31,35,0);transition-duration: 0.3s;border-radius:16px;background-color:transparent;color:#24292e}
+    	input:focus{background:rgba(3,102,214,0.6);color:#FFF;box-shadow:0 1px 15px rgba(27,31,35,.15);border:1px solid rgba(27,31,35,.15);}
+        textarea{font-weight:bold;border:1px solid rgba(27,31,35,0);transition-duration: 0.3s;border-radius:6px;background-color:transparent;color:#24292e;resize: none;}
+        textarea:focus{box-shadow:0 1px 15px rgba(27,31,35,.15);}
+        .txt-right,.vlink{display:none !important;}
+        #password1{width:90%;}
+        .vinput {border:1px solid rgba(27,31,35,0) !important;width:50% !important;}
+        .vinput:focus{background:rgba(3,102,214,0.6) !important;border:1px solid rgba(27,31,35,.15) !important;}
+        .veditor:focus{background:transparent !important;border:1px solid rgba(27,31,35,.15) !important;}
+        .veditor{border:1px solid rgba(27,31,35,0) !important;height:fit-content !important;width:100% !important;}
+        .vwrap {border:0 !important;padding:0 !important;}
+        p,.veditor,.v,.vsys,.vtime,.vcontent,.vinput,.vbtn,.vlogin-btn{color:#000000 !important;}
+        .vbtn{border-color:#000000 !important;}
+        .vicon{fill:#000000 !important;}
+        .v a{color:rgb(3,102,214) !important;}
+        .vat{font-style:italic !important;}
+        .vcard{padding-top:0px;border:0px}
+        .vlogin-btn{width:fit-content !important;height:fit-content !important;border:0 !important}
+        .v[data-class=v] *{line-height: 1.35 !important;}
+        .leancloud_visitors{float:right !important;padding:16px !important;}
+        #vcomments{padding:16px !important;}
+        #upload_div table tr{border-radius:6px !important;}
+        #upload_div{margin:10px}
+        #more-disk-div{display:block;}
+        #jinrishici{padding:12px !important;box-shadow:0 1px 8px rgba(27,31,35,0.8);}
+        #curpath{font-size:16px;transition-duration:0.3s;box-shadow:0 1px 8px rgba(27,31,35,0.8);}
+        #create_input{width:94%;}
+        .login{position: fixed;bottom: 8px;left: 8px;z-index: 105;}
+        #opflow{position: fixed;bottom: 8px;left: 8px;z-index: 105;}
+        ::-webkit-scrollbar{width:6px;border-radius:2px;transition-duration:0.3s;}
+        ::-webkit-scrollbar-thumb {width:6px;background-color:rgba(200,200,200,0.5);border-radius:2px;}
+        ::-webkit-scrollbar-track {width:6px;background:transparent;}
+        .swal-title{margin: 0px;font-size: 20px;padding:6px 16px;}
+        .swal-icon{margin:6px auto;}
+        .swal-icon:first-child{margin-top:12px;}
+        .swal-text{font-size:14px;line-height:1.3;padding:0px 6px;}
+        .swal-footer{margin-top:0px;padding:0px 16px 8px;}
+        .swal-modal{margin:6px auto;border-radius:6px}
+        .swal-title:not(:last-child){margin-bottom:0px}
+<!--TfoStyleEnd-->
+        @media only screen and (max-width:1856px){
+            .list-table td.file,.list-table th.file{width:72%}
+            .list-table td.size,.list-table th.size{width:70px !important}
+            .list-table td.updated_at,.list-table th.updated_at{width:140px !important}
+        }
+	    @media only screen and (max-width:1448px){
+            .list-table td.file,.list-table th.file{width:71%)}
+            .list-table td.size,.list-table th.size{width:70px !important}
+            .list-table td.updated_at,.list-table th.updated_at{width:140px !important}
+        }
+        @media only screen and (max-width:1152px){
+            .list-table td.file,.list-table th.file{width:calc(95% - 220px)}
+            .list-table td.size,.list-table th.size{width:70px !important}
+            .list-table td.updated_at,.list-table th.updated_at{width:140px !important}
+        }
+        @media only screen and (max-width:925px){
+            .list-table td.file,.list-table th.file{width:calc(94% - 220px)}
+            .list-table td.size,.list-table th.size{width:70px !important}
+            .list-table td.updated_at,.list-table th.updated_at{width:140px !important}
+        }
+        @media only screen and (max-width:781px){
+            .list-table td.file,.list-table th.file{width:calc(93% - 220px)}
+            .list-table td.size,.list-table th.size{width:70px !important}
+            .list-table td.updated_at,.list-table th.updated_at{width:140px !important}
+        }
+        @media only screen and (max-width:679px){
+            .list-table td.file,.list-table th.file{width:calc(92% - 220px)}
+            .list-table td.size,.list-table th.size{width:70px !important}
+            .list-table td.updated_at,.list-table th.updated_at{width:140px !important}
+        }
+        @media only screen and (max-width:605px){
+            .list-table td.file,.list-table th.file{width:calc(91% - 220px)}
+            .list-table td.size,.list-table th.size{width:70px !important}
+            .list-table td.updated_at,.list-table th.updated_at{width:140px !important}
+        }
+        @media only screen and (max-width:542px){
+            .list-table td.file,.list-table th.file{width:calc(90% - 220px)}
+            .list-table td.size,.list-table th.size{width:70px !important}
+            .list-table td.updated_at,.list-table th.updated_at{width:140px !important}
+        }
+        @media only screen and (max-width:495px){
 <!--BackgroundMStart-->
             body{background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-image:url("<!--BackgroundMUrl-->");}
 <!--BackgroundMEnd-->
+            iframe{width:200% !important;-ms-zoom:0.5;-moz-transform:scale(0.5);-moz-transform-origin: 0 0;-o-transform: scale(0.5);-o-transform-origin: 0 0;-webkit-transform: scale(0.5);-webkit-transform-origin: 0 0;}
             .title{margin-bottom:24px}
-            .list-wrapper{width:95%; margin-bottom:24px;}
+            .list-wrapper{width:98%;margin:0 auto 10px;}
             .list-table {padding:8px}
-            .list-table td, .list-table th{white-space:nowrap;overflow:auto;max-width:80px}
+            .list-table td, .list-table th{white-space:nowrap;overflow:auto;text-overflow:unset}
             .size, .updated_at{display:none}
+            .list-table td.file,.list-table th.file{width:95%;}
         }
     </style>
+    <!--<style lang="less">
+        @import "~assets/variable";.ripple--wapper{position:relative;overflow:hidden;//禁止文本选择
+            -webkit-user-select:none;-moz-user-select:none;-webkit-user-select:none;-o-user-select:none;user-select:none;.ripple--container{position:absolute;top:0;right:0;bottom:0;left:0;span{position:absolute;transform:scale(0);border-radius:100%;opacity:.3;background-color:#333;animation:ripple .2s;}@keyframes ripple{to{opacity:0;transform:scale(2);}}}}
+    </style>-->
     <!--customCss-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </head>
-
 <body>
+    <script language="javascript">window.onload=function(){var colorList=["linear-gradient(to right,rgba(169,221,204,0.9),rgba(169,221,204,0.3))","linear-gradient(to right,rgba(255,104,103,0.9),rgba(255,104,103,0.3))","linear-gradient(to right,rgba(128,155,156,0.9),rgba(128,155,156,0.3))","linear-gradient(to right,rgba(0,204,203,0.9),rgba(0,204,203,0.3))","linear-gradient(to right,rgba(246,197,0,0.9),rgba(246,197,0,0.3))","linear-gradient(to right,rgba(76,218,100,0.9),rgba(76,218,100,0.3))","linear-gradient(to right,rgba(244,67,54,0.9),rgba(244,67,54,0.3))","linear-gradient(to right,rgba(233,30,99,0.9),rgba(233,30,99,0.3))","linear-gradient(to right,rgba(156,39,176,0.9),rgba(156,39,176,0.3))","linear-gradient(to right,rgba(103,58,183,0.9),rgba(103,58,183,0.3))","linear-gradient(to right,rgba(63,81,181,0.9),rgba(63,81,181,0.3))","linear-gradient(to right,rgba(33,150,243,0.9),rgba(33,150,243,0.3))","linear-gradient(to right,rgba(3,169,244,0.9),rgba(3,169,244,0.3))","linear-gradient(to right,rgba(0,188,212,0.9),rgba(0,188,212,0.3))","linear-gradient(to right,rgba(0,150,136,0.9),rgba(0,150,136,0.3))","linear-gradient(to right,rgba(76,175,80,0.9),rgba(76,175,80,0.3))","linear-gradient(to right,rgba(139,52,171,0.9),rgba(139,52,171,0.3))","linear-gradient(to right,rgba(205,220,57,0.9),rgba(205,220,57,0.3))","linear-gradient(to right,rgba(197,183,60,0.9),rgba(197,183,60,0.3))","linear-gradient(to right,rgba(228,173,8,0.9),rgba(228,173,8,0.3))","linear-gradient(to right,rgba(255,87,34,0.9),rgba(255,87,34,0.3))","linear-gradient(to right,rgba(121,85,72,0.9),rgba(121,85,72,0.3))","linear-gradient(to right,rgba(96,125,139,0.9),rgba(96,125,139,0.3))"];var div=document.getElementsByClassName("list-header-container");for(var i=0;i<div.length;i++){var bgColor=getColorByRandom(colorList);div[i].style.background=bgColor}function getColorByRandom(colorList){var colorIndex=Math.floor(Math.random()*colorList.length);var color=colorList[colorIndex];colorList.splice(colorIndex,1);return color}}</script>
+    <script language="javascript">export default{name:'ripple',data(){return{timer:0}},props:{size:{type:Number,default:100}},deactivated(){if(this.timer){clearTimeout(this.timer)}while(this.$refs.rippleContainer.firstChild){this.$refs.rippleContainer.removeChild(this.$refs.rippleContainer.firstChild)}},methods:{showRipple(e){const target=this.$refs.rippleContainer const ripple=document.createElement('span')const size=this.size const pos=this.$refs.rippleContainer.getBoundingClientRect()const clientX=e.targetTouches[0].clientX const clientY=e.targetTouches[0].clientY const x=clientX-pos.left-size/2 const y=clientY-pos.top-size/2 const style=`top:${y/50}rem;left:${x/50}rem;width:${size/50}rem;height:${size/50}rem`ripple.setAttribute('style',style)const container=this.$refs.rippleContainer container.appendChild(ripple)},cleanRipple(){const _this=this if(this.timer){clearTimeout(this.timer)}this.timer=setTimeout(()=>{if(_this.$refs.rippleContainer&&_this.$refs.rippleContainer.firstChild){_this.$refs.rippleContainer.removeChild(_this.$refs.rippleContainer.firstChild)}},1000)}}}</script>
+    <div class="bkgd"></div>
+    <div class="ld" style="left:0;top:0;z-index:100;width:100%;height:100%;background:rgb(243,243,243);">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="z-index:101;transform: rotate(30deg);position:fixed;left:0;bottom:0;margin: auto; display: block; shape-rendering: auto;" width="36px" height="36px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<path fill="none" stroke="rgb(233,30,99)" stroke-width="10" stroke-dasharray="128.29446411132812 128.29446411132812" d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z" stroke-linecap="round" style="transform:scale(0.5);transform-origin:50px 50px">
+  <animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="2.0408163265306123s" keyTimes="0;1" values="0;256.58892822265625"></animate>
+</path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="z-index:102;transform: rotate(90deg);position:fixed;left:0;bottom:0;margin: auto; display: block; shape-rendering: auto;" width="36px" height="36px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<path fill="none" stroke="rgb(76,175,80)" stroke-width="10" stroke-dasharray="128.29446411132812 128.29446411132812" d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z" stroke-linecap="round" style="transform:scale(0.5);transform-origin:50px 50px">
+  <animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="2.0408163265306123s" keyTimes="0;1" values="0;256.58892822265625"></animate>
+</path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="z-index:103;transform: rotate(150deg);position:fixed;left:0;bottom:0;margin: auto; display: block; shape-rendering: auto;" width="36px" height="36px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<path fill="none" stroke="rgb(3,169,244)" stroke-width="10" stroke-dasharray="128.29446411132812 128.29446411132812" d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z" stroke-linecap="round" style="transform:scale(0.5);transform-origin:50px 50px">
+  <animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="2.0408163265306123s" keyTimes="0;1" values="0;256.58892822265625"></animate>
+</path></svg></div>
     <div style="padding:1px" id="top-div">
 <!--LoginStart-->
-        <a class="login" onclick="login();"><ion-icon name="log-in"></ion-icon><!--constStr@Login--></a>
+        <a class="login" onclick="login();"><ion-icon name="ban-outline"></ion-icon></a>
 <!--LoginEnd-->
 <!--AdminStart-->
-        <li class="operate"><ion-icon name="construct"></ion-icon><!--constStr@Operate--><ul>
+        <li class="operate" id="opflow"><ion-icon name="ban-outline"></ion-icon><ul>
 <!--IsFolderStart-->
-            <li><a onclick="showdiv(event,'create','');"><ion-icon name="add-circle"></ion-icon><!--constStr@Create--></a></li>
-            <li><a onclick="showdiv(event,'encrypt','');"><ion-icon name="lock"></ion-icon><!--constStr@Encrypt--></a></li>
-            <li><a href="?RefreshCache"><ion-icon name="refresh"></ion-icon><!--constStr@RefreshCache--></a></li>
+            <li><a onclick="showdiv(event,'create','');"><ion-icon name="add-circle-outline"></ion-icon><!--constStr@Create--></a></li>
+            <li><a onclick="showdiv(event,'encrypt','');"><ion-icon name="lock-closed-outline"></ion-icon><!--constStr@Encrypt--></a></li>
+            <li><a href="?RefreshCache"><ion-icon name="refresh-outline"></ion-icon><!--constStr@RefreshCache--></a></li>
 <!--IsFolderEnd-->
-            <li><a href="<!--IsPreview?-->setup"><ion-icon name="settings"></ion-icon><!--constStr@Setup--></a></li>
-            <li><a onclick="logout();"><ion-icon name="log-out"></ion-icon><!--constStr@Logout--></a></li>
+            <li><a href="<!--IsPreview?-->setup"><ion-icon name="settings-outline"></ion-icon><!--constStr@Setup--></a></li>
+            <li><a onclick="tminf();"><ion-icon name="heart-circle-outline"></ion-icon><!--constStr@Theme--></a></li>
+            <li><a onclick="logout();"><ion-icon name="log-out-outline"></ion-icon><!--constStr@Logout--></a></li>
         </ul></li>
 <!--AdminEnd-->
         &nbsp;
@@ -116,6 +229,11 @@
 <!--MultiDisksEnd-->
                 </div>
             </div>
+            <div class="list-body-container">
+                <div class="readme" id="jinrishici">
+                    <center><img src="https://v1.jinrishici.com/all.svg?font-size=26&spacing=7" style="max-width:100%;"></center>
+                </div>
+             </div>
         </div>
     </div>
 <!--MultiDiskAreaEnd-->
@@ -135,8 +253,8 @@
 <!--HeadmdStart-->
     <div class="list-wrapper" id="head-div">
         <div class="list-container">
-            <div class="list-header-container">
-                <div class="readme">
+             <div class="list-body-container">
+                 <div class="readme">
                     <div class="markdown-body" id="head">
                         <textarea id="head-md" style="display:none;"><!--HeadmdContent--></textarea>
                     </div>
@@ -148,8 +266,8 @@
 <!--ListStart-->
     <div class="list-wrapper" id="list-div">
         <div class="list-container">
-            <div class="list-header-container">
-                <h3 class="table-header"><a href="<!--base_path-->"><!--constStr@Home--></a><!--DiskPathArrayStart--> / <a href="<!--PathArrayLink-->"><!--PathArrayName--></a><!--DiskPathArrayEnd--></h3>
+            <div class="list-header-container" id="curpath">
+                <h3 class="table-header"><!--DiskPathArrayStart--> / <a href="<!--PathArrayLink-->"><!--PathArrayName--></a><!--DiskPathArrayEnd--></h3>
             </div>
             <div class="list-body-container">
 <!--EncryptedStart-->
@@ -163,7 +281,7 @@
                 </div>
 <!--EncryptedEnd-->
 <!--GuestUploadStart-->
-                <div id="upload_div" style="margin:0 0 16px 0">
+                <div id="upload_div" style="margin:6px 0 16px 0">
                 <div id="upload_btns" align="center">
                     <select onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
                         <option value=""><!--constStr@UploadFile--></option>
@@ -178,10 +296,22 @@
 <!--IsFileStart-->
                 <div style="margin: 12px 4px 4px; text-align: center">
                     <div style="margin: 24px">
-                        <textarea id="url" title="url" rows="1" style="width: 100%; margin-top: 2px;" readonly><!--FileEncodeUrl--></textarea>
-                        <a href="<!--FileUrl-->"><ion-icon name="download" style="line-height: 16px;vertical-align: middle;"></ion-icon>&nbsp;<!--constStr@Download--></a>
+                        <script type="text/javascript">
+                            function getPath() {
+                            var strFullPath = window.document.location.href;
+                            var strPath = window.document.location.pathname;
+                            var pos = strFullPath.indexOf(strPath);
+                            var prePath = strFullPath.substring(0, pos);
+                            // var postPath = strPath.substring(0, strPath.substr(1).indexOf('/') + 1);
+                            // document.getElementById("url").value= prePath + postPath + "<!--FileEncodeUrl-->";
+                            document.getElementById("url").value= prePath + "<!--FileEncodeUrl-->";
+                            }
+                            window.onload = getPath;
+                        </script>
+                        <input id="url" title="url" type="url" style="width: 90%; margin-top: 2px;" value="" readonly>
+                        <a href="<!--FileUrl-->"><ion-icon name="cloud-download-outline" style="line-height: 16px;vertical-align: middle;"></ion-icon>&nbsp;<!--constStr@Download--></a>
                     </div>
-                    <div style="margin: 24px">
+                    <div style="margin: 24px;display:block;overflow:hidden;">
 <!--IsimgFileStart-->
                         <img src="<!--FileDownUrl-->" alt="<!--FileName-->" onload="if (this.offsetWidth>document.getElementById('url').offsetWidth) this.style.width='100%';" />
 <!--IsimgFileEnd-->
@@ -201,9 +331,9 @@
                         <div id="txt">
 <!--AdminStart-->
                         <form id="txt-form" action="" method="POST">
-                            <a onclick="document.getElementById('txt-a').readOnly='';document.getElementById('txt-save').style.display='';document.getElementById('txt-editbutton').style.display='none';document.getElementById('txt-cancelbutton').style.display='';" id="txt-editbutton"><ion-icon name="create"></ion-icon><!--constStr@ClicktoEdit--></a>
-                            <a onclick="document.getElementById('txt-a').readOnly='readonly';document.getElementById('txt-save').style.display='none';document.getElementById('txt-editbutton').style.display='';document.getElementById('txt-cancelbutton').style.display='none';" id="txt-cancelbutton" style="display:none"><ion-icon name="close"></ion-icon><!--constStr@CancelEdit--></a>&nbsp;&nbsp;&nbsp;
-                            <a id="txt-save" style="display:none"><ion-icon name="save"></ion-icon><!--constStr@Save--></a>
+                            <a onclick="document.getElementById('txt-a').readOnly='';document.getElementById('txt-save').style.display='';document.getElementById('txt-editbutton').style.display='none';document.getElementById('txt-cancelbutton').style.display='';" id="txt-editbutton"><ion-icon name="create-outline"></ion-icon><!--constStr@ClicktoEdit--></a>
+                            <a onclick="document.getElementById('txt-a').readOnly='readonly';document.getElementById('txt-save').style.display='none';document.getElementById('txt-editbutton').style.display='';document.getElementById('txt-cancelbutton').style.display='none';" id="txt-cancelbutton" style="display:none"><ion-icon name="close-outline"></ion-icon><!--constStr@CancelEdit--></a>&nbsp;&nbsp;&nbsp;
+                            <a id="txt-save" style="display:none"><ion-icon name="save-outline"></ion-icon><!--constStr@Save--></a>
 <!--AdminEnd-->
                             <textarea id="txt-a" name="editfile" readonly style="width: 100%; margin-top: 2px;" <!--AdminStart-->onchange="document.getElementById('txt-save').onclick=function(){document.getElementById('txt-form').submit();}"<!--AdminEnd--> ><!--TxtContent--></textarea>
 <!--AdminStart-->
@@ -238,17 +368,17 @@
                     <tr data-to id="tr<!--filenum-->">
                         <td class="file">
 <!--AdminStart-->
-                            <li class="operate"><ion-icon name="construct"></ion-icon><a><!--constStr@Operate--></a>
+                            <li class="operate"><ion-icon name="construct-outline"></ion-icon><a></a>
                             <ul>
-                                <li><a onclick="showdiv(event,'encrypt',<!--filenum-->);"><ion-icon name="lock"></ion-icon><!--constStr@Encrypt--></a></li>
-                                <li><a onclick="showdiv(event, 'rename',<!--filenum-->);"><ion-icon name="create"></ion-icon><!--constStr@Rename--></a></li>
-                                <li><a onclick="showdiv(event, 'move',<!--filenum-->);"><ion-icon name="move"></ion-icon><!--constStr@Move--></a></li>
-                                <li><a onclick="showdiv(event, 'copy',<!--filenum-->);"><ion-icon name="copy"></ion-icon><!--constStr@Copy--></a></li>
-                                <li><a onclick="showdiv(event, 'delete',<!--filenum-->);"><ion-icon name="trash"></ion-icon><!--constStr@Delete--></a></li>
+                                <li><a onclick="showdiv(event,'encrypt',<!--filenum-->);"><ion-icon name="lock-closed-outline"></ion-icon><!--constStr@Encrypt--></a></li>
+                                <li><a onclick="showdiv(event, 'rename',<!--filenum-->);"><ion-icon name="create-outline"></ion-icon><!--constStr@Rename--></a></li>
+                                <li><a onclick="showdiv(event, 'move',<!--filenum-->);"><ion-icon name="move-outline"></ion-icon><!--constStr@Move--></a></li>
+                                <li><a onclick="showdiv(event, 'copy',<!--filenum-->);"><ion-icon name="copy-outline"></ion-icon><!--constStr@Copy--></a></li>
+                                <li><a onclick="showdiv(event, 'delete',<!--filenum-->);"><ion-icon name="trash-outline"></ion-icon><!--constStr@Delete--></a></li>
                             </ul>
                             </li>
 <!--AdminEnd-->
-                            <ion-icon name="folder"></ion-icon>
+                            <ion-icon name="folder-open-outline"></ion-icon>
                             <a id="file_a<!--filenum-->" name="folderlist" href="<!--FileEncodeReplaceUrl-->/" fileid="<!--FileId-->"><!--FileEncodeReplaceName--></a>
                         </td>
                         <td class="updated_at" id="folder_time<!--filenum-->"><!--lastModifiedDateTime--></td>
@@ -259,18 +389,18 @@
                     <tr data-to id="tr<!--filenum-->">
                         <td class="file">
 <!--AdminStart-->
-                            <li class="operate"><ion-icon name="construct"></ion-icon><a><!--constStr@Operate--></a>
+                            <li class="operate"><ion-icon name="construct-outline"></ion-icon><a></a>
                             <ul>
-                                <li><a onclick="showdiv(event, 'rename',<!--filenum-->);"><ion-icon name="create"></ion-icon><!--constStr@Rename--></a></li>
-                                <li><a onclick="showdiv(event, 'move',<!--filenum-->);"><ion-icon name="move"></ion-icon><!--constStr@Move--></a></li>
-                                <li><a onclick="showdiv(event, 'copy',<!--filenum-->);"><ion-icon name="copy"></ion-icon><!--constStr@Copy--></a></li>
-                                <li><a onclick="showdiv(event, 'delete',<!--filenum-->);"><ion-icon name="trash"></ion-icon><!--constStr@Delete--></a></li>
+                                <li><a onclick="showdiv(event, 'rename',<!--filenum-->);"><ion-icon name="create-outline"></ion-icon><!--constStr@Rename--></a></li>
+                                <li><a onclick="showdiv(event, 'move',<!--filenum-->);"><ion-icon name="move-outline"></ion-icon><!--constStr@Move--></a></li>
+                                <li><a onclick="showdiv(event, 'copy',<!--filenum-->);"><ion-icon name="copy-outline"></ion-icon><!--constStr@Copy--></a></li>
+                                <li><a onclick="showdiv(event, 'delete',<!--filenum-->);"><ion-icon name="trash-outline"></ion-icon><!--constStr@Delete--></a></li>
                             </ul>
                             </li>
 <!--AdminEnd-->
                             <ion-icon name="<!--IconValue-->"></ion-icon>
                             <a id="file_a<!--filenum-->" name="filelist" href="<!--FileEncodeReplaceUrl-->?preview" fileid="<!--FileId-->" target=_blank><!--FileEncodeReplaceName--></a>
-                            <a class="download" href="<!--FileEncodeReplaceUrl-->"><ion-icon name="download"></ion-icon></a>
+                            <a class="download" href="<!--FileEncodeReplaceUrl-->"><ion-icon name="cloud-download-outline"></ion-icon></a>
                         </td>
                         <td class="updated_at" id="file_time<!--filenum-->"><!--lastModifiedDateTime--></td>
                         <td class="size" id="file_size<!--filenum-->"><!--size--></td>
@@ -324,7 +454,7 @@
 <!--ReadmemdStart-->
     <div class="list-wrapper" id="readme-div">
         <div class="list-container">
-            <div class="list-header-container">
+            <div class="list-body-container">
                 <div class="readme">
                     <div class="markdown-body" id="readme">
                         <textarea id="readme-md" style="display:none;"><!--ReadmemdContent--></textarea>
@@ -354,7 +484,7 @@
     <div style="word-break: break-all;word-wrap: break-word;">
         <div id="rename_div" class="operatediv" style="display:none">
             <div>
-                <label id="rename_label"></label><br><br><a onclick="operatediv_close('rename')" class="operatediv_close"><!--constStr@Close--></a>
+                <label id="rename_label"></label><br><br><a onclick="operatediv_close('rename')" class="operatediv_close">×</a>
                 <form id="rename_form" onsubmit="return submit_operate('rename');">
                 <input id="rename_sid" name="rename_sid" type="hidden" value="">
                 <input id="rename_fileid" name="rename_fileid" type="hidden" value="">
@@ -366,7 +496,7 @@
         </div>
         <div id="delete_div" class="operatediv" style="display:none">
             <div>
-                <br><a onclick="operatediv_close('delete')" class="operatediv_close"><!--constStr@Close--></a>
+                <br><a onclick="operatediv_close('delete')" class="operatediv_close">×</a>
                 <label id="delete_label"></label>
                 <form id="delete_form" onsubmit="return submit_operate('delete');">
                 <label id="delete_input"><!--constStr@Delete-->?</label>
@@ -379,7 +509,7 @@
         </div>
         <div id="encrypt_div" class="operatediv" style="display:none">
             <div>
-                <label id="encrypt_label"></label><br><br><a onclick="operatediv_close('encrypt')" class="operatediv_close"><!--constStr@Close--></a>
+                <label id="encrypt_label"></label><br><br><a onclick="operatediv_close('encrypt')" class="operatediv_close">×</a>
                 <form id="encrypt_form" onsubmit="return submit_operate('encrypt');">
                 <input id="encrypt_sid" name="encrypt_sid" type="hidden" value="">
                 <input id="encrypt_fileid" name="encrypt_fileid" type="hidden" value="">
@@ -391,7 +521,7 @@
         </div>
         <div id="copy_div" class="operatediv" style="display:none">
             <div>
-                <label id="copy_label"></label><br><br><a onclick="operatediv_close('copy')" class="operatediv_close"><!--constStr@Close--></a>
+                <label id="copy_label"></label><br><br><a onclick="operatediv_close('copy')" class="operatediv_close">×</a>
                 <form id="copy_form" onsubmit="return submit_operate('copy');">
                 <input id="copy_sid" name="copy_sid" type="hidden" value="">
                 <input id="copy_fileid" name="copy_fileid" type="hidden" value="">
@@ -403,7 +533,7 @@
         </div>
         <div id="move_div" class="operatediv" style="display:none">
             <div>
-                <label id="move_label"></label><br><br><a onclick="operatediv_close('move')" class="operatediv_close"><!--constStr@Close--></a>
+                <label id="move_label"></label><br><br><a onclick="operatediv_close('move')" class="operatediv_close">×</a>
                 <form id="move_form" onsubmit="return submit_operate('move');">
                 <input id="move_sid" name="move_sid" type="hidden" value="">
                 <input id="move_fileid" name="move_fileid" type="hidden" value="">
@@ -422,7 +552,7 @@
         </div>
         <div id="create_div" class="operatediv" style="display:none">
             <div>
-                <a onclick="operatediv_close('create')" class="operatediv_close"><!--constStr@Close--></a>
+                <a onclick="operatediv_close('create')" class="operatediv_close">×</a>
                 <form id="create_form" onsubmit="return submit_operate('create');">
                     <input id="create_sid" name="create_sid" type="hidden" value="">
                     <input id="create_fileid" name="create_fileid" type="hidden" value="">
@@ -461,7 +591,7 @@
 <!--LoginStart-->
     <div id="login_div" class="operatediv" style="display:none">
         <div style="margin:50px">
-            <a onclick="operatediv_close('login')" class="operatediv_close"><!--constStr@Close--></a>
+            <a onclick="operatediv_close('login')" class="operatediv_close">×</a>
 	        <center>
 	            <form action="<!--IsPreview?-->admin" method="post">
 		        <input id="login_input" name="password1" type="password" placeholder="<!--constStr@InputPassword-->">
@@ -471,15 +601,19 @@
         </div>
 	</div>
 <!--LoginEnd-->
-    <div style="color: rgba(247,247,249,0);"><!--FootStr--></div>
+    <div style="color: rgba(247,247,249,1);text-align:center;text-shadow:0 1px 15px rgba(27,31,35,1);font-weight:bold;margin-top:20px">Power by<a style="color:rgb(3,102,214)" href="https://github.com/BingoKingo/Tfo">Tfo</a>'s Theme for <a style="color:rgb(3,102,214)" href="https://github.com/qkqpttgf/OneManager-php">OneManager-php</a></div>
+    <div style="color: rgba(247,247,249,0);text-align:center;text-shadow:0 1px 15px rgba(27,31,35,0);font-weight:bold;margin-top:6px"><!--FootStr--></div>
+    <div style="color: rgba(247,247,249,1);text-align:center;text-shadow:0 1px 15px rgba(27,31,35,1);font-weight:bold;margin-top:6px;display:none" id="tminf">
+        Current Version: 20210205 &nbsp;<br>Update Tips: 1.Upgrade with the program. (Best Choice!) 2.Copy the CustomTheme link and paste it in the Platform Config form of program setting page. 3.Update manually. &nbsp;<br>
+        Tfo’s CustomTheme Address: https://tfo.herokuapp.com/index/Uploaded/WebContents/Github/Tfo/NecessaryFiles/tfo.html &nbsp;<br>Tfo's Theme UpdateCheck Address: https://github.com/qkqpttgf/OneManager-php/blob/master/theme/tfo.html &nbsp;<br>https://github.com/BingoKingo/Tfo/blob/master/theme/tfo.html &nbsp;<br>Tfo’s HomePage on GitHub: https://github.com/BingoKingo/Tfo &nbsp;<br>Tfo’s Example Website: https://tfo.herokuapp.com/
+    </div>
 </body>
-
 <!--ListStart-->
-<!--MdRequireStart--><link rel="stylesheet" href="//unpkg.zhimg.com/github-markdown-css@3.0.1/github-markdown.css">
-<script type="text/javascript" src="//unpkg.zhimg.com/marked@0.6.2/marked.min.js"></script><!--MdRequireEnd-->
-<!--GuestUploadStart--><script type="text/javascript" src="//cdn.bootcss.com/spark-md5/3.0.0/spark-md5.min.js"></script><!--GuestUploadEnd-->
-<!--AliyundriveUploadJsStart--><script src="//cdn.bootcdn.net/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script><!--AliyundriveUploadJsEnd-->
-<!--IsFileStart--><!--IspdfFileStart--><script src="//cdn.bootcss.com/pdf.js/2.3.200/pdf.min.js"></script><!--IspdfFileEnd--><!--IsFileEnd-->
+<!--MdRequireStart--><link rel="stylesheet" href="https://unpkg.zhimg.com/github-markdown-css@3.0.1/github-markdown.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/marked@2.0.0/lib/marked.min.js"></script><!--MdRequireEnd-->
+<!--GuestUploadStart--><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/spark-md5@3.0.1/spark-md5.min.js"></script><!--GuestUploadEnd-->
+<!--AliyundriveUploadJsStart--><script src="https://cdn.jsdelivr.net/npm/sha1@1.1.1/sha1.min.js"></script><!--AliyundriveUploadJsEnd-->
+<!--IsFileStart--><!--IspdfFileStart--><script src="https://cdn.bootcss.com/pdf.js/2.3.200/pdf.min.js"></script><!--IspdfFileEnd--><!--IsFileEnd-->
 <!--ListEnd-->
 <script type="text/javascript">
     function changelanguage(str)
@@ -492,9 +626,8 @@
         location.href = location.href;
     }
 <!--ListStart-->
-
 <!--IsFileStart-->
-    var $url = document.getElementById('url');
+    var $url = document.getElementById('url').value;
     if ($url) {
         $url.innerHTML = location.protocol + '//' + location.host + $url.innerHTML;
         $url.style.height = $url.scrollHeight + 'px';
@@ -631,6 +764,11 @@
 <!--ReadmemdEnd-->
 <!--ShowThumbnailsStart-->
     function showthumbnails(obj) {
+        swal("Wait", "Loading Thumbnails...", {
+          buttons: false,
+          timer: 1000,
+          closeOnEsc: false,
+        });
         images = [<!--ImgExts-->];
         var files=document.getElementsByName('filelist');
         for ($i=0;$i<files.length;$i++) {
@@ -766,7 +904,7 @@
     var expires = "expires="+expd.toGMTString();
     document.cookie="timezone="+timezone+"; path=/; "+expires;
     if (timezone!=<!--timezone-->) {
-        alert('Your timezone is '+timezone+', reload local timezone.');
+        swal('TimeZone', 'Your timezone is '+timezone+', reload local timezone.', {buttons: false,timer: 1000,closeOnEsc: false,});
         location.href=location.href;
     }
 <!--WriteTimezoneEnd-->
@@ -780,10 +918,10 @@
         tmptextarea.select();
         tmptextarea.setSelectionRange(0, tmptextarea.value.length);
         document.execCommand("copy");
-        alert(tmptextarea.innerHTML+"<!--constStr@Success-->");
+        swal("<!--constStr@Success-->", tmptextarea.innerHTML, {icon: "success",timer: 3000,closeOnEsc: false,});
     }
 <!--UploadJsStart-->
-    function size_format(num) {
+function size_format(num) {
         if (num>1024) {
             num=num/1024;
         } else {
@@ -815,8 +953,8 @@
         document.getElementById('upload_submit').style.display='';
         document.getElementById('upload_file').style.display='';*/
     }
-<!--UploadJsEnd-->
-<!--OnedriveUploadJsStart-->
+    <!--UploadJsEnd-->
+    <!--OnedriveUploadJsStart-->
     function preup() {
         uploadbuttonhide();
         var files=document.getElementById('upload_file').files;
@@ -840,9 +978,9 @@
                 tr1.setAttribute('data-to',1);
                 td1=document.createElement('td');
                 tr1.appendChild(td1);
-                td1.setAttribute('style','width:30%;word-break:break-word;');
+                td1.setAttribute('style','width:fit-content');
                 td1.setAttribute('id','upfile_td1_'+timea+'_'+i);
-                td1.innerHTML=(file.webkitRelativePath||file.name)+'<br>'+size_format(file.size);
+                td1.innerHTML=(file.webkitRelativePath||file.name)+'&nbsp;'+size_format(file.size);
                 td2=document.createElement('td');
                 tr1.appendChild(td2);
                 td2.setAttribute('id','upfile_td2_'+timea+'_'+i);
@@ -855,7 +993,7 @@
                 uploadbuttonshow();
                 return;
             }
-            var upbigfilename = encodeURIComponent((file.webkitRelativePath||file.name));
+            upbigfilename = encodeURIComponent((file.webkitRelativePath||file.name));
             var filemd5='';
 <!--GuestStart-->
             function getext(str) {
@@ -963,7 +1101,7 @@
                     if (newstartsize==0) {
                         StartStr='<!--constStr@UploadStartAt-->:' +StartTime.toLocaleString()+'<br>' ;
                     } else {
-                        StartStr='<!--constStr@LastUpload-->'+size_format(newstartsize)+ '<br><!--constStr@ThisTime--><!--constStr@UploadStartAt-->:' +StartTime.toLocaleString()+'<br>' ;
+                        StartStr='<!--constStr@LastUpload-->'+size_format(newstartsize)+ '&nbsp;<!--constStr@ThisTime--><!--constStr@UploadStartAt-->:' +StartTime.toLocaleString()+'<br>' ;
                     }
                     var chunksize=5*1024*1024; // chunk size, max 60M. 每小块上传大小，最大60M，微软建议10M
                     if (totalsize>200*1024*1024) chunksize=10*1024*1024;
@@ -986,7 +1124,7 @@
                                 var tmptime = new Date();
                                 var tmpspeed = e.loaded*1000/(tmptime.getTime()-C_starttime.getTime());
                                 var remaintime = (totalsize-asize-e.loaded)/tmpspeed;
-                                label.innerHTML=StartStr+'<!--constStr@Upload--> ' +size_format(asize+e.loaded)+ ' / '+size_format(totalsize) + ' = ' + ((asize+e.loaded)*100/totalsize).toFixed(2) + '% <!--constStr@AverageSpeed-->:'+size_format((asize+e.loaded-newstartsize)*1000/(tmptime.getTime()-StartTime.getTime()))+'/s<br><!--constStr@CurrentSpeed--> '+size_format(tmpspeed)+'/s <!--constStr@Expect--> '+remaintime.toFixed(1)+'s';
+                                label.innerHTML=StartStr+'<!--constStr@Upload--> ' +size_format(asize+e.loaded)+ ' / '+size_format(totalsize) + ' = ' + ((asize+e.loaded)*100/totalsize).toFixed(2) + '%<br><!--constStr@AverageSpeed-->:'+size_format((asize+e.loaded-newstartsize)*1000/(tmptime.getTime()-StartTime.getTime()))+'/s<br><!--constStr@CurrentSpeed--> '+size_format(tmpspeed)+'/s <!--constStr@Expect--> '+remaintime.toFixed(1)+'s';
                             }
                         }
                         var C_starttime = new Date();
@@ -1022,7 +1160,7 @@
 <!--AdminEnd-->
                             } else {
                                 if (!response['nextExpectedRanges']) {
-                                    label.innerHTML='<font color="red">'+xhr.responseText+'</font><br>';
+                                    label.innerHTML='<font color="red">'+xhr.responseText+'</font>&nbsp;';
                                 } else {
                                     var a=response['nextExpectedRanges'][0];
                                     asize=Number( a.slice(0,a.indexOf("-")) );
@@ -1078,84 +1216,58 @@
             var tdnum = timea+'_'+i;
             td1=document.getElementById('upfile_td1_'+tdnum);
             td2=document.getElementById('upfile_td2_'+tdnum);
-            var chunksize=10*1024*1024; // 分块大小
-            //var chunksize=100*1024; // 测试小块
-            /*if (file.size>100*1024*1024*1024) {
+            if (file.size>100*1024*1024*1024) {
                 td2.innerHTML='<font color="red"><!--constStr@UpFileTooLarge--></font>';
                 uploadbuttonshow();
                 return;
-            }*/
-            var upbigfilename = encodeURIComponent((file.webkitRelativePath||file.name));
-            var reader = new FileReader();
-            reader.onprogress = function(e) {
-                td2.innerText = '计算SHA1... ' + (e.loaded*100/file.size).toFixed(2) + " %";
             }
-            reader.onload = function(e) {
+            upbigfilename = encodeURIComponent((file.webkitRelativePath||file.name));
+            td2.innerHTML='计算SHA1 ...';
+            var reader = new FileReader();
+            reader.readAsArrayBuffer(file);
+            reader.onload = function(e){
                 var filesha1 = sha1(this.result);
-<!--GuestStart-->
-                function getext(str) {
-                    let p = str.lastIndexOf('.');
-                    if (p===-1) return '';
-                    if (p===0) return '';
-                    return str.substr(p);
-                }
-                var ext = getext(file.webkitRelativePath||file.name);
-                upbigfilename = filesha1 + ext;
-<!--GuestEnd-->
-                while (upbigfilename.indexOf('%2F')>0) upbigfilename = upbigfilename.replace('%2F', '/');
                 td2.innerHTML='<!--constStr@GetUploadLink--> ...';
-                var html = JSON.parse(localStorage.getItem(filesha1));
-                //console.log(html);
-                if (html!==null && ('part_info_list' in html)) {
-                    td2.innerHTML='<!--constStr@UploadStart--> ...';
-                    binupfile(file, html, timea+'_'+i, upbigfilename, filesha1, chunksize);
-                } else {
-                    var xhr1 = new XMLHttpRequest();
-                    xhr1.open("POST", '?action=upbigfile');
-                    xhr1.setRequestHeader('x-requested-with','XMLHttpRequest');
-                    xhr1.onload = function(e){
-                        //console.log(xhr1.status+xhr1.responseText);
-                        td2.innerHTML='<font color="red">'+xhr1.responseText+'</font>';
-                        if (xhr1.status==201) {
-                            if (xhr1.responseText=='') {
-                                getuplink(i,1);
-                                return;
-                            }
-                            var html=JSON.parse(xhr1.responseText);
-                            //console.log(html);
-                            if (!html['part_info_list']) {
-                                if (html.name!='') {
-                                    if (html.exist==true) td2.innerHTML=html.name+' 文件名已有';
-                                    else if (html.rapid_upload==true) td2.innerHTML=html.name+' 秒传';
-                                    else td2.innerHTML='<font color="red">'+xhr1.responseText+'</font><br>';
-                                    td1.innerHTML='<div style="color:green"><a href="<!--base_disk_path--><!--Path-->'+upbigfilename+'?preview" id="upfile_a_'+tdnum+'" target="_blank">'+td1.innerHTML+'</a><br><a href="<!--base_disk_path--><!--Path-->'+upbigfilename+'" id="upfile_a1_'+tdnum+'"></a><!--constStr@UploadComplete--><button onclick="CopyAllDownloadUrl(\'#upfile_a1_'+tdnum+'\');" id="upfile_cpbt_'+tdnum+'" <!--AdminStart--> style="display:none"<!--AdminEnd--> ><!--constStr@CopyUrl--></button></div>';
-                                } else {
-                                    td2.innerHTML='<font color="red">'+xhr1.responseText+'</font><br>';
-                                }
-                            } else {
-                                td2.innerHTML='<!--constStr@UploadStart--> ...';
-                                //console.log(html);
-                                localStorage.setItem(filesha1, JSON.stringify(html));
-                                binupfile(file, html, timea+'_'+i, upbigfilename, filesha1, chunksize);
-                            }
+                var xhr1 = new XMLHttpRequest();
+                xhr1.open("POST", '?action=upbigfile');
+                xhr1.setRequestHeader('x-requested-with','XMLHttpRequest');
+                xhr1.onload = function(e){
+                    //console.log(xhr1.status+xhr1.responseText);
+                    td2.innerHTML='<font color="red">'+xhr1.responseText+'</font>';
+                    if (xhr1.status==201) {
+                        if (xhr1.responseText=='') {
+                            getuplink(i,1);
+                            return;
                         }
-                        if (i<files.length-1) {
-                            i++;
-                            getuplink(i);
+                        var html=JSON.parse(xhr1.responseText);
+                        //console.log(html);
+                        if (!html['part_info_list']) {
+                            if (html.name!='') {
+                                if (html.exist==true) td2.innerHTML=html.name+' 文件名已有';
+                                else if (html.rapid_upload==true) td2.innerHTML=html.name+' 秒传';
+                                else td2.innerHTML='<font color="red">'+xhr1.responseText+'</font><br>';
+                                td1.innerHTML='<div style="color:green"><a href="<!--base_disk_path--><!--Path-->'+html.name+'?preview" id="upfile_a_'+tdnum+'" target="_blank">'+td1.innerHTML+'</a><br><a href="<!--base_disk_path--><!--Path-->'+html.name+'" id="upfile_a1_'+tdnum+'"></a><!--constStr@UploadComplete--><button onclick="CopyAllDownloadUrl(\'#upfile_a1_'+tdnum+'\');" id="upfile_cpbt_'+tdnum+'" <!--AdminStart--> style="display:none"<!--AdminEnd--> ><!--constStr@CopyUrl--></button></div>';
+                            } else {
+                                td2.innerHTML='<font color="red">'+xhr1.responseText+'</font><br>';
+                            }
+                        } else {
+                            td2.innerHTML='<!--constStr@UploadStart--> ...';
+                            console.log(html['part_info_list'][0]['upload_url']);
+                            binupfile(file,html['part_info_list'][0]['upload_url'],timea+'_'+i, upbigfilename, filesha1,html['file_id'],html['upload_id']);
                         }
                     }
-                    xhr1.send('upbigfilename='+ upbigfilename +'&filesize='+ file.size +'&filelastModified='+ file.lastModified + '&filesha1=' + filesha1 + '&chunksize=' + chunksize);
+                    if (i<files.length-1) {
+                        i++;
+                        getuplink(i);
+                    }
                 }
+                xhr1.send('upbigfilename='+ upbigfilename +'&filesize='+ file.size +'&filelastModified='+ file.lastModified + '&filesha1=' + filesha1);
             }
-            reader.readAsArrayBuffer(file);
         }
         uploadbuttonshow();
     }
-    function binupfile(file, res, tdnum, filename, filesha1, chunksize) {
+    function binupfile(file,url,tdnum,filename,filesha1,fileid,uploadid){
         // xhr.getResponseHeader
-        if (!('ETag' in res)) res['ETag'] = new Array();
-        var fileid = res['file_id'];
-        var uploadid = res['upload_id'];
         var label=document.getElementById('upfile_td2_'+tdnum);
         var reader = new FileReader();
         var StartStr='';
@@ -1164,15 +1276,9 @@
         var EndTime;
         var newstartsize = 0;
         if(!!file){
-            var chunknum = 0;
-            var chunknumtotal = res['part_info_list'].length;
             var asize=0;
             var totalsize=file.size;
             var newstartsize=0;
-            while (res['ETag'][chunknum]!=null) {
-                chunknum++;
-                newstartsize += chunksize;
-            }
             StartTime = new Date();
             asize = newstartsize;
             if (newstartsize==0) {
@@ -1183,142 +1289,81 @@
             //var chunksize=5*1024*1024; // chunk size, max 60M. 每小块上传大小
             //if (totalsize>200*1024*1024) chunksize=10*1024*1024;
             function readblob(start) {
-                var end=start+chunksize;
-                var blob = file.slice(start,end);
-                reader.readAsArrayBuffer(blob);
-                //reader.readAsArrayBuffer(file);
+                //var end=start+chunksize;
+                //var blob = file.slice(start,end);
+                //reader.readAsArrayBuffer(blob);
+                reader.readAsArrayBuffer(file);
             }
             readblob(asize);
 
             reader.onload = function(e){
-                if (asize>totalsize) {
-                    var xhr1 = new XMLHttpRequest();
-                    xhr1.open("POST", '?action=upbigfile');
-                    xhr1.setRequestHeader('x-requested-with','XMLHttpRequest');
-                    xhr1.onload = function(e){
-                        console.log(xhr1.responseText+','+xhr1.status);
-                        if (xhr1.status==200) {
-                            localStorage.removeItem(filesha1);
+                var binary = this.result;
+                var xhr = new XMLHttpRequest();
+                xhr.open("PUT", url, true);
+                //xhr.setRequestHeader('x-requested-with','XMLHttpRequest');
+                bsize=asize+e.loaded-1;
+                xhr.setRequestHeader('Content-Range', 'bytes ' + asize + '-' + bsize +'/'+ totalsize);
+                xhr.upload.onprogress = function(e){
+                    if (e.lengthComputable) {
+                        var tmptime = new Date();
+                        var tmpspeed = e.loaded*1000/(tmptime.getTime()-C_starttime.getTime());
+                        var remaintime = (totalsize-asize-e.loaded)/tmpspeed;
+                        label.innerHTML=StartStr+'<!--constStr@Upload--> ' +size_format(asize+e.loaded)+ ' / '+size_format(totalsize) + ' = ' + ((asize+e.loaded)*100/totalsize).toFixed(2) + '% <!--constStr@AverageSpeed-->:'+size_format((asize+e.loaded-newstartsize)*1000/(tmptime.getTime()-StartTime.getTime()))+'/s<br><!--constStr@CurrentSpeed--> '+size_format(tmpspeed)+'/s <!--constStr@Expect--> '+remaintime.toFixed(1)+'s';
+                    }
+                }
+                var C_starttime = new Date();
+                xhr.onload = function(e){
+                    if (xhr.status<500) {
+                        //console.log(xhr.responseText);
+                        //console.log(xhr.getResponseHeader('ETag'));
+                    //var response=JSON.parse(xhr.responseText);
+                    if (xhr.responseText==''&&xhr.getResponseHeader('ETag')!='') {
+                        // 有ETag说明上传成功
+                        var xhr1 = new XMLHttpRequest();
+                        xhr1.open("POST", '?action=upbigfile');
+                        //xhr1.open("GET", '?action=del_upload_cache&filelastModified='+file.lastModified+'&filesize='+file.size+'&filename='+filename);
+                        xhr1.setRequestHeader('x-requested-with','XMLHttpRequest');
+                        xhr1.send('uploadid='+ uploadid +'&fileid='+ fileid +'&etag='+ xhr.getResponseHeader('ETag'));
+                        xhr1.onload = function(e){
+                            console.log(xhr1.responseText+','+xhr1.status);
 <!--AdminStart-->
                             var html=JSON.parse(xhr1.responseText);
                             //response.name=file.webkitRelativePath||response.name;
                             addelement(html);
 <!--AdminEnd-->
-                            /*if (totalsize>10*1024*1024) {
-                                var xhr3 = new XMLHttpRequest();
-                                xhr3.open("GET", '?action=del_upload_cache&filelastModified='+file.lastModified+'&filesize='+file.size+'&filename='+filename);
-                                xhr3.setRequestHeader('x-requested-with','XMLHttpRequest');
-                                xhr3.send(null);
-                                xhr3.onload = function(e){
-                                    console.log(xhr3.responseText+','+xhr3.status);
-                                }
-                            }*/
-                            EndTime=new Date();
-                            MiddleStr = '<!--constStr@EndAt-->:'+EndTime.toLocaleString()+'<br>';
-                            if (newstartsize==0) {
-                                MiddleStr += '<!--constStr@AverageSpeed-->:'+size_format(totalsize*1000/(EndTime.getTime()-StartTime.getTime()))+'/s<br>';
-                            } else {
-                                MiddleStr += '<!--constStr@ThisTime--><!--constStr@AverageSpeed-->:'+size_format((totalsize-newstartsize)*1000/(EndTime.getTime()-StartTime.getTime()))+'/s<br>';
-                            }
-                            document.getElementById('upfile_td1_'+tdnum).innerHTML='<div style="color:green"><a href="<!--base_disk_path--><!--Path-->'+filename+'?preview" id="upfile_a_'+tdnum+'" target="_blank">'+document.getElementById('upfile_td1_'+tdnum).innerHTML+'</a><br><a href="<!--base_disk_path--><!--Path-->'+filename+'" id="upfile_a1_'+tdnum+'"></a><!--constStr@UploadComplete--><button onclick="CopyAllDownloadUrl(\'#upfile_a1_'+tdnum+'\');" id="upfile_cpbt_'+tdnum+'" <!--AdminStart--> style="display:none"<!--AdminEnd--> ><!--constStr@CopyUrl--></button></div>';
-                            label.innerHTML=StartStr+MiddleStr;
-                            label.style.color='green';
-                        } else {
-                            label.innerHTML= '<font color="red">' + xhr1.status + ',' + xhr1.responseText + '</font>';
-                            localStorage.removeItem(filesha1);
                         }
-                    }
-                    xhr1.send('uploadid=' + uploadid + '&fileid=' + fileid + '&etag=' + JSON.stringify(res['ETag']));
-                } else {
-                    var binary = this.result;
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("PUT", res['part_info_list'][chunknum]['upload_url'], true);
-                    //xhr.setRequestHeader('x-requested-with','XMLHttpRequest');
-                    bsize=asize+e.loaded-1;
-                    xhr.setRequestHeader('Content-Range', 'bytes ' + asize + '-' + bsize +'/'+ totalsize);
-                    xhr.upload.onprogress = function(e){
-                        if (e.lengthComputable) {
-                            var tmptime = new Date();
-                            var tmpspeed = e.loaded*1000/(tmptime.getTime()-C_starttime.getTime());
-                            var remaintime = (totalsize-asize-e.loaded)/tmpspeed;
-                            label.innerHTML=StartStr+'<!--constStr@Upload--> ' +size_format(asize+e.loaded)+ ' / '+size_format(totalsize) + ' = ' + ((asize+e.loaded)*100/totalsize).toFixed(2) + '% <!--constStr@AverageSpeed-->:'+size_format((asize+e.loaded-newstartsize)*1000/(tmptime.getTime()-StartTime.getTime()))+'/s<br><!--constStr@CurrentSpeed--> '+size_format(tmpspeed)+'/s <!--constStr@Expect--> '+remaintime.toFixed(1)+'s';
+                        if (totalsize>10*1024*1024) {
+                            var xhr3 = new XMLHttpRequest();
+                            xhr3.open("GET", '?action=del_upload_cache&filelastModified='+file.lastModified+'&filesize='+file.size+'&filename='+filename);
+                            xhr3.setRequestHeader('x-requested-with','XMLHttpRequest');
+                            xhr3.send(null);
+                            xhr3.onload = function(e){
+                                console.log(xhr3.responseText+','+xhr3.status);
+                            }
                         }
-                    }
-                    var C_starttime = new Date();
-                    xhr.onload = function(e){
-                        if (xhr.status<500) {
-                            //console.log(xhr.responseText);
-                            //console.log(xhr.getResponseHeader('ETag'));
-                        //var response=JSON.parse(xhr.responseText);
-                        if (xhr.responseText==''&&xhr.getResponseHeader('ETag')!='') {
-                            // 有ETag说明本段上传成功
-                            let etag = xhr.getResponseHeader('ETag');
-                            //if (etag.substr(0,1)=='"') etag = etag.substr(1);还就要引号！
-                            //if (etag.substr(-1)=='"') etag = etag.substr(0, etag.length-1);
-                            res['ETag'][chunknum] = etag;
-                            localStorage.setItem(filesha1, JSON.stringify(res));
-                            chunknum++;
-                            asize = bsize + 1;
-                            if (chunknum==chunknumtotal) {
-                                // 上传结束
-                                var xhr1 = new XMLHttpRequest();
-                                xhr1.open("POST", '?action=upbigfile');
-                                xhr1.setRequestHeader('x-requested-with','XMLHttpRequest');
-                                xhr1.onload = function(e){
-                                    console.log(xhr1.responseText+','+xhr1.status);
-                                    if (xhr1.status==200) {
-                                        localStorage.removeItem(filesha1);
-<!--AdminStart-->
-                                        var html=JSON.parse(xhr1.responseText);
-                                        //response.name=file.webkitRelativePath||response.name;
-                                        addelement(html);
-<!--AdminEnd-->
-                                        /*if (totalsize>10*1024*1024) {
-                                            var xhr3 = new XMLHttpRequest();
-                                            xhr3.open("GET", '?action=del_upload_cache&filelastModified='+file.lastModified+'&filesize='+file.size+'&filename='+filename);
-                                            xhr3.setRequestHeader('x-requested-with','XMLHttpRequest');
-                                            xhr3.send(null);
-                                            xhr3.onload = function(e){
-                                                console.log(xhr3.responseText+','+xhr3.status);
-                                            }
-                                        }*/
-                                        EndTime=new Date();
-                                        MiddleStr = '<!--constStr@EndAt-->:'+EndTime.toLocaleString()+'<br>';
-                                        if (newstartsize==0) {
-                                            MiddleStr += '<!--constStr@AverageSpeed-->:'+size_format(totalsize*1000/(EndTime.getTime()-StartTime.getTime()))+'/s<br>';
-                                        } else {
-                                            MiddleStr += '<!--constStr@ThisTime--><!--constStr@AverageSpeed-->:'+size_format((totalsize-newstartsize)*1000/(EndTime.getTime()-StartTime.getTime()))+'/s<br>';
-                                        }
-                                        document.getElementById('upfile_td1_'+tdnum).innerHTML='<div style="color:green"><a href="<!--base_disk_path--><!--Path-->'+filename+'?preview" id="upfile_a_'+tdnum+'" target="_blank">'+document.getElementById('upfile_td1_'+tdnum).innerHTML+'</a><br><a href="<!--base_disk_path--><!--Path-->'+filename+'" id="upfile_a1_'+tdnum+'"></a><!--constStr@UploadComplete--><button onclick="CopyAllDownloadUrl(\'#upfile_a1_'+tdnum+'\');" id="upfile_cpbt_'+tdnum+'" <!--AdminStart--> style="display:none"<!--AdminEnd--> ><!--constStr@CopyUrl--></button></div>';
-                                        label.innerHTML=StartStr+MiddleStr;
-                                        label.style.color='green';
-                                    } else {
-                                        label.innerHTML= '<font color="red">' + xhr1.status + ',' + xhr1.responseText + '</font>';
-                                        localStorage.removeItem(filesha1);
-                                    }
-                                }
-                                xhr1.send('uploadid=' + uploadid + '&fileid=' + fileid + '&etag=' + JSON.stringify(res['ETag']));
-                                // uploadbuttonshow();
-                            } else {
-                                readblob(asize);
-                            }
+                        EndTime=new Date();
+                        MiddleStr = '<!--constStr@EndAt-->:'+EndTime.toLocaleString()+'<br>';
+                        if (newstartsize==0) {
+                            MiddleStr += '<!--constStr@AverageSpeed-->:'+size_format(totalsize*1000/(EndTime.getTime()-StartTime.getTime()))+'/s<br>';
                         } else {
-                            console.log(xhr.status+xhr.responseText);//<PartEtag>
-                            if (xhr.status==409) {
-                                let str = xhr.responseText;
-                                str = str.substr(str.indexOf('<PartEtag>')+10);
-                                str = str.substr(0, str.indexOf('</PartEtag>'));
-                                res['ETag'][chunknum] = str;
-                                localStorage.setItem(filesha1, JSON.stringify(res));
-                                chunknum++;
-                                asize += chunksize;
-                                readblob(asize);
-                            }
-                                //label.innerHTML='<font color="red">'+xhr.responseText+'</font><br>';
-                        } } else readblob(asize);
-                    }
-                    xhr.send(binary);
+                            MiddleStr += '<!--constStr@ThisTime--><!--constStr@AverageSpeed-->:'+size_format((totalsize-newstartsize)*1000/(EndTime.getTime()-StartTime.getTime()))+'/s<br>';
+                        }
+                        while (filename.indexOf('%2F')>0) filename = filename.replace('%2F', '/');
+                        document.getElementById('upfile_td1_'+tdnum).innerHTML='<div style="color:green"><a href="<!--base_disk_path--><!--Path-->'+filename+'?preview" id="upfile_a_'+tdnum+'" target="_blank">'+document.getElementById('upfile_td1_'+tdnum).innerHTML+'</a><br><a href="<!--base_disk_path--><!--Path-->'+filename+'" id="upfile_a1_'+tdnum+'"></a><!--constStr@UploadComplete--><button onclick="CopyAllDownloadUrl(\'#upfile_a1_'+tdnum+'\');" id="upfile_cpbt_'+tdnum+'" <!--AdminStart--> style="display:none"<!--AdminEnd--> ><!--constStr@CopyUrl--></button></div>';
+                        label.innerHTML=StartStr+MiddleStr;
+                        label.style.color='green';
+                        // uploadbuttonshow();
+                    } else {
+                        if (!response['nextExpectedRanges']) {
+                            label.innerHTML='<font color="red">'+xhr.responseText+'</font><br>';
+                        } else {
+                            var a=response['nextExpectedRanges'][0];
+                            asize=Number( a.slice(0,a.indexOf("-")) );
+                            readblob(asize);
+                        }
+                    } } else readblob(asize);
                 }
+                xhr.send(binary);
             }
         }
     }
@@ -1336,6 +1381,27 @@
         document.cookie = "admin=; path=/; "+expires;
         location.href = location.href;
     }
+    function tminf() {
+        var tminftxt=document.getElementById("tminf").innerText;
+        swal({
+        title: "Tfo's Theme Information",
+        text: tminftxt,
+        icon: "info",
+        buttons: {
+        cancel: "Close",
+        update: "Update with OneManager-php",
+        },
+    })
+    .then((value) => {
+    switch (value) {
+        case "update":
+            window.open("/?setup");
+            swal.close();
+        default:
+            swal.close();
+        }
+    });
+}
 <!--IsFolderStart-->
     function showdiv(event,action,num) {
         var $operatediv=document.getElementsByName('operatediv');
@@ -1405,8 +1471,8 @@
                     html=JSON.parse(xhr.responseText);
                     addelement(html);
                 }
-                //alert('success');
-            } else alert(xhr.status+'\n'+xhr.responseText);
+                //swal("<!--constStr@Success-->", "", {icon: "success",buttons: false,timer: 1000,closeOnEsc: false,});
+            } else swal(xhr.status, xhr.responseText, {icon: "error",timer: 3000,closeOnEsc: false,});
             document.getElementById(str+'_div').style.display='none';
             document.getElementById('mask').style.display='none';
         }
@@ -1522,6 +1588,5 @@
     document.getElementById('password1').focus();
 <!--EncryptedEnd-->
 </script>
-<script src="//unpkg.zhimg.com/ionicons@4.4.4/dist/ionicons.js"></script>
 <!--customScript-->
 </html>
