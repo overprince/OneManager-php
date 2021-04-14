@@ -97,7 +97,10 @@ function setConfig($arr, $disktag = '')
     $indisk = 0;
     $operatedisk = 0;
     foreach ($arr as $k => $v) {
-        if (isInnerEnv($k)) {
+        if (isCommonEnv($k)) {
+            if (isBase64Env($k)) $envs[$k] = base64y_encode($v);
+            else $envs[$k] = $v;
+        } elseif (isInnerEnv($k)) {
             if (isBase64Env($k)) $envs[$disktag][$k] = base64y_encode($v);
             else $envs[$disktag][$k] = $v;
             $indisk = 1;
@@ -116,8 +119,12 @@ function setConfig($arr, $disktag = '')
         } elseif ($k=='disktag_rename' || $k=='disktag_newname') {
             if ($arr['disktag_rename']!=$arr['disktag_newname']) $operatedisk = 1;
         } else {
-            if (isBase64Env($k)) $envs[$k] = base64y_encode($v);
-            else $envs[$k] = $v;
+            //$tmpdisk = json_decode($v, true);
+            //var_dump($tmpdisk);
+            //error_log(json_encode($tmpdisk));
+            //if ($tmpdisk===null) 
+            $envs[$k] = $v;
+            //else $envs[$k] = $tmpdisk;
         }
     }
     if ($indisk) {
@@ -310,8 +317,8 @@ function OnekeyUpate($auth = 'qkqpttgf', $project = 'OneManager-php', $branch = 
     $githubfile = file_get_contents($url);
     if (!$githubfile) return 0;
     file_put_contents($tarfile, $githubfile);
-    if (splitfirst(PHP_VERSION, '.')[0] == '7') {
-        $phar = new PharData($tarfile); // need php7
+    if (splitfirst(PHP_VERSION, '.')[0] > '5') {
+        $phar = new PharData($tarfile); // need php5.3, 7, 8
         $phar->extractTo($projectPath, null, true);//路径 要解压的文件 是否覆盖
     } else {
         ob_start();
